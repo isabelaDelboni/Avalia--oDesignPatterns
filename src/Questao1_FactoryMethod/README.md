@@ -1,0 +1,5 @@
+Questão 1 — Factory Method
+
+Nesse sistema, o objetivo era calcular tarifas de transporte para diferentes modalidades (terrestre, aérea e marítima), cada uma com suas próprias regras. Para resolver isso de forma organizada e sem encher o código de condicionais, usei o padrão Factory Method. Ele permite que cada tipo de logística crie o transporte correspondente sem que o código principal precise saber qual é. Assim, a classe EmpresaLogistica define o processo geral de entrega, e cada subclasse (LogisticaTerrestre, LogisticaAerea, LogisticaMaritima) decide qual transporte concreto instanciar. Isso deixa o sistema genérico, fácil de expandir e com baixo acoplamento.
+
+Escolhi esse padrão porque ele reflete uma ideia importante de design: separar o que o sistema faz de como ele cria os objetos. Com o Factory Method, posso adicionar novos tipos de transporte no futuro sem mexer no código existente. Foi uma forma de aplicar na prática o princípio aberto/fechado (Open/Closed), deixando o sistema preparado para mudanças sem quebrar o que já funciona.
